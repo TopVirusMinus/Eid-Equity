@@ -15,7 +15,7 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Source+Sans+3:wght@300&display=swap" rel="stylesheet">
+			<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Source+Sans+3:wght@200&display=swap" rel="stylesheet">
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
@@ -30,5 +30,9 @@ const { title } = Astro.props;
 	}
 	h1{
 		font-family: 'Lato', sans-serif;
+	}
+
+	a{
+		font-weight: 200;
 	}
 </style>
