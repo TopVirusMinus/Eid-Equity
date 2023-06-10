@@ -1,13 +1,16 @@
 ---
 const { text } = Astro.props;
 const { theme } = Astro.props;
+
 ---
 
 {
     theme === "secondary" ? (
         <button id="secondaryBtn" class="text-white w-[300px] px-20 py-3 border font-medium rounded-md"><h1 class="text-xl">{text}</h1></button>
-    ) : (
+    ) : theme === "primary" ? (
         <button id="primaryBtn" class="text-white w-[300px] px-20 py-3 bg-secondary rounded-md"><h1 class="text-xl">{text}</h1></button>
+    ) : (
+        <button id="goldBtn" class="text-white w-[300px] px-20 py-3 bg-myGold rounded-md"><h1 class="text-xl">{text}</h1></button>
     )
 }
 
@@ -24,6 +27,10 @@ const { theme } = Astro.props;
     }
 
     #primaryBtn:hover{
-        background-color: #027ed6;
+        background-color: #014c83;
+    }
+
+    #goldBtn:hover{
+        background-color: #bc901e;
     }
 </style>
