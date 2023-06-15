@@ -4,6 +4,8 @@ export interface Props {
 }
 
 const { title } = Astro.props;
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <!DOCTYPE html>
@@ -29,7 +31,13 @@ const { title } = Astro.props;
 		<title>Eid Equity - Multifamily Investment Specialists</title>
 	</head>
 	<body class="relative">
+		<header class="z-50">
+			<Navbar/>
+		</header>
 		<slot />
+		<footer>
+			<Footer/>
+		</footer>
 	</body>
 </html>
 <style is:global>
