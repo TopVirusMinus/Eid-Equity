@@ -1,36 +1,51 @@
 ---
 const { text } = Astro.props;
 const { theme } = Astro.props;
-
 ---
 
 {
-    theme === "secondary" ? (
-        <button id="secondaryBtn" class="text-white w-[300px] px-20 py-3 border font-medium rounded-md"><h1 class="text-xl">{text}</h1></button>
-    ) : theme === "primary" ? (
-        <button id="primaryBtn" class="text-white w-[300px] px-20 py-3 bg-secondary rounded-md"><h1 class="text-xl">{text}</h1></button>
-    ) : (
-        <button id="goldBtn" class="text-white w-[300px] px-20 py-3 bg-myGold rounded-md"><h1 class="text-xl">{text}</h1></button>
-    )
+  theme === "secondary" ? (
+    <button
+      id="secondaryBtn"
+      class="text-white w-[300px] px-20 py-3 border font-medium rounded-md"
+    >
+      <h1 class="text-xl">{text}</h1>
+    </button>
+  ) : theme === "primary" ? (
+    <button
+      id="primaryBtn"
+      class="text-white w-[300px] px-20 py-3 bg-myGold rounded-md"
+    >
+      <h1 class="text-xl">{text}</h1>
+    </button>
+  ) : (
+    <button
+      id="goldBtn"
+      class="text-white w-[300px] px-20 py-3 bg-myGold rounded-md"
+    >
+      <h1 class="text-xl">{text}</h1>
+    </button>
+  )
 }
 
-
 <style>
-    #secondaryBtn, #primaryBtn{
-        transition: 0.2s ease-in-out;
-    }
+  #secondaryBtn,
+  #primaryBtn {
+    transition: 0.2s ease-in-out;
+  }
 
-    #secondaryBtn:hover{
-        background-color: #fff;
-        color: black;
-        border-color: #fff;
-    }
+  #secondaryBtn:hover {
+    background-color: #fff;
+    color: black;
+    border-color: #fff;
+  }
 
-    #primaryBtn:hover{
-        background-color: #014c83;
-    }
+  #primaryBtn:hover {
+    background-color: #fff;
+    color: black;
+  }
 
-    #goldBtn:hover{
-        background-color: #bc901e;
-    }
+  #goldBtn:hover {
+    background-color: #bc901e;
+  }
 </style>
