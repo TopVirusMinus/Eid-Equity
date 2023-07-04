@@ -1,62 +1,84 @@
 ---
 export interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
-import Navbar from '../components/Navbar.astro';
-import Footer from '../components/Footer.astro';
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Eid Equity specializes in empowering investors through multifamily investment opportunities. Secure your financial future with our expertise.">
-		<meta name="viewport" content="width=device-width" />
-		<meta name="keywords" content="Eid Equity, Multifamily Investments, Real Estate Investing, Financial Freedom, Secure Investments">
-		<link rel="icon" type="image/svg+xml" href="/images/EidEquity.ico" />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link rel="preload" href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Source+Sans+3:wght@200&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-		<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Source+Sans+3:wght@200&display=swap"></noscript>
-		<meta name="generator" content={Astro.generator} />
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Eid Equity specializes in empowering investors through multifamily investment opportunities. Secure your financial future with our expertise."
+    />
+    <meta name="viewport" content="width=device-width" />
+    <meta
+      name="keywords"
+      content="Eid Equity, Multifamily Investments, Real Estate Investing, Financial Freedom, Secure Investments"
+    />
+    <link rel="icon" type="image/svg+xml" href="/images/EidEquity.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Source+Sans+3:wght@200&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Source+Sans+3:wght@200&display=swap"
+      /></noscript
+    >
+    <meta name="generator" content={Astro.generator} />
 
-		<meta property="og:title" content="Eid Equity - Multifamily Investment Specialists" />
-		<meta property="og:description" content="Eid Equity specializes in empowering investors through multifamily investment opportunities. Secure your financial future with our expertise." />
-		<meta property="og:url" content="https://www.eid-equity.vercel.app" />
-		<meta property="og:image" content="/images/EidEquity.ico" />
+    <meta
+      property="og:title"
+      content="Eid Equity - Multifamily Investment Specialists"
+    />
+    <meta
+      property="og:description"
+      content="Eid Equity specializes in empowering investors through multifamily investment opportunities. Secure your financial future with our expertise."
+    />
+    <meta property="og:url" content="https://www.eid-equity.vercel.app" />
+    <meta property="og:image" content="/images/EidEquity.ico" />
 
-
-		<title>Eid Equity - Multifamily Investment Specialists</title>
-	</head>
-	<body class="relative">
-		<header class="z-50">
-			<Navbar/>
-		</header>
-		<slot />
-		<footer>
-			<Footer/>
-		</footer>
-	</body>
+    <title>Eid Equity - Multifamily Investment Specialists</title>
+  </head>
+  <body class="relative">
+    <header class="z-50">
+      <Navbar />
+    </header>
+    <slot />
+    <footer>
+      <Footer />
+    </footer>
+  </body>
 </html>
 <style is:global>
-	*{
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-	}
-	html {
-		font-family: 'Source Sans 3', sans-serif;
-		background-color: #F6F6F6;
-		scroll-behavior: smooth;
-		scroll-padding-top: 80px;
-	}
-	h1{
-		font-family: 'Lato', sans-serif;
-	}
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html {
+    font-family: "Source Sans 3", sans-serif;
+    background-color: #f6f6f6;
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+  }
+  h1 {
+    font-family: "Lato", sans-serif;
+  }
 
-	a, h3{
-		font-weight: 200;
-	}
+  a,
+  h3 {
+    font-weight: 200;
+  }
 </style>

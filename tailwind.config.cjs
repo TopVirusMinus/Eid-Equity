@@ -16,7 +16,7 @@ module.exports = {
     plugins: [],
     colors: {
       secondary: "#005694",
-      secondaryLight:   "#0093FF",
+      secondaryLight: "#0093FF",
       mask: "rgba(6, 32, 54, 0.85)",
       white: "white",
       black: "black",

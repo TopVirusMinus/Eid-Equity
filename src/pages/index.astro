@@ -1,17 +1,16 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Navbar.astro';
-import Hero from '../components/Hero.astro';
-import Strategy from '../components/Strategy.astro';
-import Footer from '../components/Footer.astro';
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import Strategy from "../components/Strategy.astro";
+import Services from "../components/Services.astro";
+import Divider from "../components/Divider.astro";
 ---
 
 <Layout title="Eid Equity">
-	<main class="z-10">
-		<Hero/>
-		<Strategy/>
-	</main>
+  <main class="z-10">
+    <Hero />
+    <Strategy />
+    <Divider text="Services" />
+    <Services />
+  </main>
 </Layout>
-
-<style>
-</style>
