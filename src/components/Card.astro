@@ -1,8 +1,8 @@
 ---
-const { title, description, imgSrc, link } = Astro.props;
+const { size, title, description, imgSrc, showLink, link } = Astro.props;
 ---
 
-<article class="overflow-hidden rounded-lg w-full lg:w-1/3 bg-white shadow-sm">
+<article class=`overflow-hidden rounded-lg ${size} w-full bg-white shadow-sm`>
   <img alt="Office" src={imgSrc} class="h-56 w-full object-cover" />
 
   <div class="p-4 sm:p-6">
@@ -15,17 +15,21 @@ const { title, description, imgSrc, link } = Astro.props;
     <p class="mt-2 text-sm/relaxed text-gray-500">
       {description}
     </p>
-
-    <a
-      href="#"
-      class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-600"
-    >
-      Find out more<span
-        aria-hidden="true"
-        class="block transition-all group-hover:ms-0.5 rtl:rotate-180"
-      >
-        &rarr;
-      </span>
-    </a>
+    {
+      showLink && (
+        <a
+          href="#"
+          class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-600"
+        >
+          Find out more
+          <span
+            aria-hidden="true"
+            class="block transition-all group-hover:ms-0.5 rtl:rotate-180"
+          >
+            &rarr;
+          </span>
+        </a>
+      )
+    }
   </div>
 </article>

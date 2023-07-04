@@ -2,10 +2,10 @@
 ---
 
 <nav
-  class="fixed w-full px-4 py-4 flex justify-between shadow-sm items-center bg-white"
+  class="fixed w-full px-4 py-4 flex justify-between shadow-sm items-center z-50 bg-white"
 >
   <a class="text-3xl font-bold leading-none" href="#">
-    <img src="/images/EidEquity.webp" />
+    <img src="/images/EidEquity.webp" alt="logo" />
   </a>
   <div class="lg:hidden">
     <button class="navbar-burger flex items-center text-blue-600 p-3">
@@ -44,7 +44,7 @@
         ></path>
       </svg>
     </li>
-    <li><a class="text-sm text-blue-600" href="#">About Us</a></li>
+    <li><a class="text-sm text-blue-600" href="#strategy">About Us</a></li>
     <li class="text-gray-300">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -62,7 +62,9 @@
       </svg>
     </li>
     <li>
-      <a class="text-sm text-gray-400 hover:text-gray-500" href="#">Invest</a>
+      <a class="text-sm text-gray-400 hover:text-gray-500" href="#Portfolio"
+        >Portfolio</a
+      >
     </li>
     <li class="text-gray-300">
       <svg
@@ -102,8 +104,7 @@
       </svg>
     </li>
     <li>
-      <a class="text-sm text-gray-400 hover:text-gray-500" href="#">Portfolio</a
-      >
+      <a class="text-sm text-gray-400 hover:text-gray-500" href="#">Invest</a>
     </li>
   </ul>
   <a
@@ -144,13 +145,13 @@
         <li class="mb-1">
           <a
             class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
-            href="#">About Us</a
+            href="#strategy">About Us</a
           >
         </li>
         <li class="mb-1">
           <a
             class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
-            href="#">Invest</a
+            href="#Portfolio">Portfolio</a
           >
         </li>
         <li class="mb-1">
@@ -162,7 +163,7 @@
         <li class="mb-1">
           <a
             class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
-            href="#">Portfolio</a
+            href="#">Invest</a
           >
         </li>
       </ul>
