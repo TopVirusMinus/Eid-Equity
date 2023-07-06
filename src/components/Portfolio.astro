@@ -2,50 +2,85 @@
 import Card from "./Card.astro";
 ---
 
+<h1 class="text-center text-4xl mb-5">
+  CURRENT <span class="text-myGold">INVESTMENT OPPORTUNITIES</span>
+</h1>
 <div
   class="p-4 md:px-28 grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8"
   id="Portfolio"
 >
   <div class="rounded-lg bg-gray-100">
     <Card
-      title="The Aspen"
-      description="Fort Worth, TX | 224 Units"
-      imgSrc="https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+      title="Cottonwood Apartments"
+      location="Lakewood, Colorado"
+      internalRate="Internal Rate of Return - 16-19 %"
+      totalReturn="Total Return over 5 yrs - 1.95x"
+      preferredReturn="Preferred Return – 7%"
+      isCurrent="true"
+      imgSrc="https://massive.capital/wp-content/uploads/2023/06/image-92.webp"
     />
   </div>
   <div class="rounded-lg bg-gray-100">
     <Card
-      title="The Aspen"
-      description="Fort Worth, TX | 224 Units"
-      imgSrc="https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+      title="XSPACE"
+      location="Houston, TX"
+      internalRate="Internal Rate of Return - 22.8 %"
+      totalReturn="Total Return over 2-2.5 yrs - 1.51x"
+      preferredReturn="Preferred Return – 7%"
+      isCurrent="true"
+      imgSrc="https://massive.capital/wp-content/uploads/2023/06/xsape.webp"
     />
   </div>
   <div class="rounded-lg bg-gray-100">
     <Card
-      title="The Aspen"
-      description="Fort Worth, TX | 224 Units"
-      imgSrc="https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+      title="Amberwood Apartment Homes"
+      location="Fort Worth, Tx"
+      internalRate="Internal Rate of Return - 17.1%"
+      totalReturn="Total Return over Years – 1.95x"
+      preferredReturn="Preferred Return – 7%"
+      isCurrent="true"
+      imgSrc="https://massive.capital/wp-content/uploads/2023/04/image-65.webp"
+    />
+  </div>
+</div>
+
+<h1 class="text-center text-4xl mt-10 mb-5">
+  CLOSED <span class="text-myGold">OFFERING</span>
+</h1>
+<div
+  class="p-4 md:px-28 grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8"
+  id="Portfolio"
+>
+  <div class="rounded-lg bg-gray-100">
+    <Card
+      title="Water’s Edge Townhomes"
+      location="Fayetteville, NC ( Fayetteville MSA)"
+      internalRate="Units – 30"
+      totalReturn="Cash on Cash Return – 8%"
+      preferredReturn="Target IRR – 18%"
+      isClosed="true"
+      imgSrc="https://massive.capital/wp-content/uploads/2022/10/image-16.webp"
     />
   </div>
   <div class="rounded-lg bg-gray-100">
     <Card
-      title="The Aspen"
-      description="Fort Worth, TX | 224 Units"
-      imgSrc="https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+      title="PASADENA-22"
+      location="Pasadena, Tx"
+      internalRate="Units - 226 (+2 offices)"
+      totalReturn="Cash on Cash Return –9.7%"
+      preferredReturn="Target IRR – 17.87%"
+      isClosed="true"
+      imgSrc="https://massive.capital/wp-content/uploads/2022/10/pasedena-1.webp"
     />
   </div>
   <div class="rounded-lg bg-gray-100">
     <Card
-      title="The Aspen"
-      description="Fort Worth, TX | 224 Units"
-      imgSrc="https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-    />
-  </div>
-  <div class="rounded-lg bg-gray-100">
-    <Card
-      title="The Aspen"
-      description="Fort Worth, TX | 224 Units"
-      imgSrc="https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+      title="Villages at Fate"
+      location="Fate, Texas (Dallas MSA)"
+      internalRate="Units - Mixed Use (Multi + Retail)"
+      closed="Closed – June, 2022"
+      isClosed="true"
+      imgSrc="https://massive.capital/wp-content/uploads/2022/11/Fate.webp"
     />
   </div>
 </div>

@@ -1,20 +1,83 @@
 ---
-const { size, title, description, imgSrc, showLink, link } = Astro.props;
+const {
+  size,
+  title,
+  description,
+  location,
+  internalRate,
+  totalReturn,
+  preferredReturn,
+  imgSrc,
+  showLink,
+  closed,
+  link,
+  isClosed,
+  isCurrent,
+} = Astro.props;
 ---
 
-<article class=`overflow-hidden rounded-lg ${size} w-full bg-white shadow-sm`>
+<article
+  class=`overflow-hidden rounded-lg ${size} w-full bg-white shadow-sm transform transition duration-500 hover:scale-110`
+>
   <img alt="Office" src={imgSrc} class="h-56 w-full object-cover" />
 
-  <div class="p-4 sm:p-6">
-    <a href="#">
-      <h3 class="text-lg font-medium text-myGold text-gray-900">
-        {title}
-      </h3>
-    </a>
+  <div class="p-4 sm:p-6 font-bold">
+    {
+      title && (
+        <a href="#">
+          <h3 class="text-lg font-medium text-myGold text-gray-900 mb-2">
+            {title}
+          </h3>
+        </a>
+      )
+    }
+    {
+      description && (
+        <p class="text-sm/relaxed text-gray-500 font-normal">{description}</p>
+      )
+    }
 
-    <p class="mt-2 text-sm/relaxed text-gray-500">
-      {description}
-    </p>
+    {
+      location && (
+        <div class="flex items-center gap-1">
+          <img src="images/map-pin.svg" alt="location svg" class="w-4" />
+          <p class="text-sm/relaxed text-gray-500">{location}</p>
+        </div>
+      )
+    }
+    {
+      internalRate && (
+        <div class="flex items-center gap-1">
+          <img src="images/home.svg" alt="location svg" class="w-4" />
+          <p class="text-sm/relaxed text-gray-500">{internalRate}</p>
+        </div>
+      )
+    }
+    {
+      totalReturn && (
+        <div class="flex items-center gap-1">
+          <img src="images/refresh-cw.svg" alt="location svg" class="w-4" />
+          <p class="text-sm/relaxed text-gray-500">{totalReturn}</p>
+        </div>
+      )
+    }
+    {
+      preferredReturn && (
+        <div class="flex items-center gap-1">
+          <img src="images/dollar-sign.svg" alt="location svg" class="w-4" />
+          <p class="text-sm/relaxed text-gray-500">{preferredReturn}</p>
+        </div>
+      )
+    }
+
+    {
+      closed && (
+        <>
+          <p class="text-sm/relaxed text-gray-500 text-center mt-5">{closed}</p>
+        </>
+      )
+    }
+
     {
       showLink && (
         <a
@@ -27,6 +90,36 @@ const { size, title, description, imgSrc, showLink, link } = Astro.props;
             class="block transition-all group-hover:ms-0.5 rtl:rotate-180"
           >
             &rarr;
+          </span>
+        </a>
+      )
+    }
+
+    {
+      (isClosed || isCurrent) && (
+        <a
+          class="group mt-5 relative inline-flex items-center overflow-hidden rounded bg-myGold px-8 py-3 text-black focus:outline-none focus:ring active:bg-indigo-500"
+          href="/download"
+        >
+          <span class="absolute -start-full transition-all group-hover:start-4">
+            <svg
+              class="h-5 w-5 rtl:rotate-180"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
+            </svg>
+          </span>
+
+          <span class="text-sm font-bold transition-all group-hover:ms-4">
+            {isClosed ? "CLOSED" : isCurrent ? "INVEST NOW" : ""}
           </span>
         </a>
       )
